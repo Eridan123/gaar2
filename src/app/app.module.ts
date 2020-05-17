@@ -11,11 +11,23 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatDividerModule} from "@angular/material/divider";
 import {A11yModule} from "@angular/cdk/a11y";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {  MatInputModule } from '@angular/material/input';
+import { AboutComponent } from './components/about/about.component';
+import { DocumentComponent } from './components/document/document.component';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { ContactComponent } from './components/contact/contact.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
+    DocumentComponent,
+    ResourcesComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,10 +40,12 @@ import {A11yModule} from "@angular/cdk/a11y";
     MatDividerModule,
     HttpClientModule,
     A11yModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatListModule,
   ],
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

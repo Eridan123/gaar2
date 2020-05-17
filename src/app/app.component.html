@@ -11,30 +11,50 @@
         <mat-chip><span>RU</span></mat-chip>
         <mat-chip><span>EN</span></mat-chip>
         <mat-divider [vertical]="false" [inset]="true"></mat-divider>
-        <mat-chip>F</mat-chip>
-        <mat-chip>I</mat-chip>
-        <mat-chip color="primary">W</mat-chip>
-        <mat-chip color="accent"><a>Обратная связь</a></mat-chip>
+        <mat-chip color="accent"><a href="#feedback_form">Обратная связь</a></mat-chip>
       </mat-chip-list>
     </div>
   </div>
 </header>
-<nav  id="navbar">
+<nav  id="navbar" class="navbar navbar-default fixed-top">
   <div class="container">
     <ul class="nav_div">
-      <li><a class="nav_text" mat-menu-item routerLink="/importedproducts">Перечень </a></li>
-      <li><a class="nav_text" mat-menu-item routerLink="/importedproducts">товаров</a></li>
-      <li><a class="nav_text" mat-menu-item routerLink="/importedproducts">импортируемых </a></li>
+      <li><a class="nav_text" mat-menu-item routerLink="/about">О проекте </a></li>
+      <li><a class="nav_text" mat-menu-item routerLink="/resource">Ресурсы</a></li>
+      <li><a class="nav_text" mat-menu-item routerLink="/document">Документы </a></li>
+      <li><a class="nav_text" mat-menu-item routerLink="/contact">Контакты </a></li>
     </ul>
   </div>
 </nav>
 <div class="container" style="background-image:url('../../assets/images/search_background.png');">
   <router-outlet></router-outlet>
 </div>
-
 <footer class="main-card">
-  <div class="logo" [routerLink]="['/']">
-    <div class="logo__img"><img src="../assets/images/gaar_icon.png" class="lis"></div>
-    <span class="logo__txt">ГОСУДАРСТВЕННОЕ АГЕНТСТВО<br>АНТИМОНОПОЛЬНОГО РЕГУЛИРОВАНИЯ<br><small>ПРИ ПРАВИТЕЛЬСТВЕ КЫРГЫЗСКОЙ РЕСПУБЛИКИ</small><br><b>АИС ГААР</b></span>
-  </div>
+  <mat-grid-list class="footer_div" cols="3" rowHeight="4:2">
+    <mat-grid-tile>
+      <div class="logo" [routerLink]="['/']">
+        <div class="logo__img"><img src="../assets/images/gaar_icon.png" class="lis"></div>
+        <span class="logo__txt"><br><b>АИС ГААР</b></span>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-list>
+        <mat-list-item><h3>НАВИГАЦИЯ</h3></mat-list-item>
+        <mat-list-item>
+          <a class="nav_text" mat-menu-item routerLink="/about">О проекте </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="nav_text" mat-menu-item routerLink="/resource">Ресурсы</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="nav_text" mat-menu-item routerLink="/document">Документы </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a class="nav_text" mat-menu-item routerLink="/contact">Контакты </a>
+        </mat-list-item>
+      </mat-list>
+      <mat-divider></mat-divider>
+    </mat-grid-tile>
+    <mat-grid-tile><h3>НАШИ КОНТАКТЫ</h3></mat-grid-tile>
+  </mat-grid-list>
 </footer>

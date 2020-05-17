@@ -60,7 +60,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 #navbar ul{
-  alignment: center;
+  margin-left: 30%;
 }
 
 #navbar li{
@@ -71,29 +71,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 #navbar a{
   color:#fff;
   text-decoration: none;
-  font-size:15px;
+  font-size:20px;
   padding-right:15px;
   text-align: center;
 }
-
-::ng-deep div.mat-menu-panel {
-  min-width: 112px;
-  /** set width to 500px */
-  max-width: 500px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  max-height: calc(100vh - 48px);
-  border-radius: 4px;
-  outline: 0;
+.footer_div{
+  background-color: #173F5F;
+  color: white;
 }
-
-.main-card {
-  float: center;
-  margin: 5%;
-  background: none;
+mat-list{
+  margin-top: 15px;
   padding: 0;
 }
 
-#footer{
-  background-color: #0198CA;
+mat-list a{
+  color: white;
+  style: none;
 }
+
+h3{
+  color: orangered;
+  font-weight: bold;
+}
+mat-list-item{
+  height: 20px !important;
+}
+
